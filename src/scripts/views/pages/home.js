@@ -1,7 +1,7 @@
-import TheRestaurantDbSource from '../../data/restaurant-source';
+import RestaurantDbSource from '../../data/restaurant-source';
 import { createRestaurantItemTemplate } from '../templates/template-creator';
 
-const NowPlaying = {
+const Home = {
   async render() {
     return `
       <div class="content">
@@ -14,7 +14,7 @@ const NowPlaying = {
   },
 
   async afterRender() {
-    const restaurants = await TheRestaurantDbSource.nowPlayingRestaurants();
+    const restaurants = await RestaurantDbSource.getRestaurants();
     const restaurantsContainer = document.querySelector('#restaurants');
     restaurants.forEach((restaurant) => {
       restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant);
@@ -22,4 +22,4 @@ const NowPlaying = {
   },
 };
 
-export default NowPlaying;
+export default Home;
