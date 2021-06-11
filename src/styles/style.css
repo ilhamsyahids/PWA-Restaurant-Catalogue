@@ -74,6 +74,8 @@ body {
     padding: 8px;
     margin-bottom: 5px;
     width: 100%;
+    min-height: 44px;
+    min-width: 44px;
 }
 
 /*
@@ -94,6 +96,24 @@ body {
     color: white;
     margin: 0 auto;
     font-size: 3em;
+}
+
+/*
+  Skip to content
+*/
+
+.skip-link {
+    position: absolute;
+    top: -41px;
+    left: 0;
+    background-color: #810000;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
 }
 
 /*
