@@ -6,10 +6,13 @@ Restaurant catalogue PWA
 ## Features
 
 - List of restaurant
+- Favorite restaurant
+- Add to Home Screen
+- Offline feature
   
 ## Tech Stack
 
-**Client:** Vanila Javascript, Webpack
+**Client:** Vanila Javascript, Webpack, IndexedDB, Service Worker
 
 ## Acknowledgements
 
