@@ -23,9 +23,23 @@ const createRestaurantMenusTemplate = (menus) => {
   return htmlTemplate;
 };
 
+const createRestaurantReviewTemplate = (review) => `
+  <h4>${review.name}</h4>
+  <span>${review.date}</span>
+  <p>${review.review}</p>
+`;
+
+const createRestaurantReviewsTemplate = (reviews) => {
+  let htmlTemplate = '<div class="restaurant__review">';
+  reviews.forEach((review) => {
+    htmlTemplate += createRestaurantReviewTemplate(review);
+  });
+  htmlTemplate += '</div>';
+  return htmlTemplate;
+};
+
 export {
   createRestaurantCategoriesTemplate,
-  createRestaurantCategoryTemplate,
   createRestaurantMenusTemplate,
-  createRestaurantMenuTemplate,
+  createRestaurantReviewsTemplate,
 };

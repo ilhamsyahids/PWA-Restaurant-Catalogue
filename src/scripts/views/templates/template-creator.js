@@ -2,6 +2,7 @@ import CONFIG from '../../globals/config';
 import {
   createRestaurantCategoriesTemplate,
   createRestaurantMenusTemplate,
+  createRestaurantReviewsTemplate,
 } from './template-restaurant-detail';
 
 const createRestaurantDetailTemplate = (restaurant) => `
@@ -25,13 +26,23 @@ const createRestaurantDetailTemplate = (restaurant) => `
   <div class="restaurant__overview">
     <h3>Menus</h3>
   </div>
-  <h4>Foods</h4>
-  <div class="restaurant__menus">
-    <p>${createRestaurantMenusTemplate(restaurant.menus.foods)}</p>
+  <div>
+    <h4>Foods</h4>
+    <div class="restaurant__menus">
+      <p>${createRestaurantMenusTemplate(restaurant.menus.foods)}</p>
+    </div>
   </div>
-  <h4>Drinks</h4>
-  <div class="restaurant__menus">
-    <p>${createRestaurantMenusTemplate(restaurant.menus.drinks)}</p>
+  <div>
+    <h4>Drinks</h4>
+    <div class="restaurant__menus">
+      <p>${createRestaurantMenusTemplate(restaurant.menus.drinks)}</p>
+    </div>
+  </div>
+  <div class="restaurant__overview">
+    <h3>Reviews</h3>
+  </div>
+  <div>
+    ${createRestaurantReviewsTemplate(restaurant.customerReviews)}
   </div>
 `;
 
