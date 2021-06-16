@@ -51,6 +51,9 @@ const createRestaurantItemTemplate = (restaurant) => `
     <div class="restaurant-item__header">
         <img class="restaurant-item__header__poster" alt="${restaurant.name}"
             src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}">
+        <div class="restaurant-item__header__city">
+            <p>${restaurant.city}</p>
+        </div>
         <div class="restaurant-item__header__rating">
             <p>⭐️<span class="restaurant-item__header__rating__score">${restaurant.rating}</span></p>
         </div>

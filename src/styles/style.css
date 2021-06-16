@@ -11,6 +11,12 @@ body {
     flex-direction: column;
 }
 
+a {
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+}
+
 /*
   AppBar
 */
@@ -30,6 +36,11 @@ body {
 .app-bar .app-bar__menu {
     display: flex;
     align-items: center;
+}
+
+button {
+    min-width: 44px;
+    min-height: 44px;
 }
 
 .app-bar .app-bar__menu button {
@@ -104,7 +115,7 @@ body {
 
 .skip-link {
     position: absolute;
-    top: -41px;
+    top: -65px;
     left: 0;
     background-color: #810000;
     color: white;
@@ -164,6 +175,16 @@ main {
 
 .restaurant-item .restaurant-item__header .restaurant-item__header__poster {
     width: 100%;
+}
+
+.restaurant-item .restaurant-item__header .restaurant-item__header__city {
+    position: absolute;
+    padding: 8px;
+    top: 20px;
+    right: 0;
+    display: inline-block;
+    background-color: rgb(111, 134, 48);
+    color: white;
 }
 
 .restaurant-item .restaurant-item__header .restaurant-item__header__rating {
