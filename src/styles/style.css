@@ -103,6 +103,12 @@ button {
     text-align: center;
 }
 
+@media screen and (max-width: 600px) {
+    #hero {
+        background-image: url('/images/hero-small.jpg');
+    }
+}
+
 .title {
     color: white;
     margin: 0 auto;
