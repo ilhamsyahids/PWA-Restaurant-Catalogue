@@ -7,12 +7,12 @@ class FavoriteRestaurantShowPresenter {
   }
 
   async _showFavoriteRestaurant() {
-    const restaurant = await this._favoriteRestaurant.getAllRestaurant();
+    const restaurant = await this._favoriteRestaurant.getAllRestaurants();
     this._displayRestaurant(restaurant);
   }
 
   _displayRestaurant(restaurant) {
-    this._view.showFavoriteRestaurant(restaurant);
+    this._view.showFavoriteRestaurants(restaurant);
   }
 }
 
