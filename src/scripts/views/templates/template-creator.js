@@ -80,9 +80,28 @@ const createLikedButtonTemplate = () => `
   </button>
 `;
 
+const createSkeletonRestaurantTemplate = (count) => {
+  let template = '';
+
+  for (let i = 0; i < count; i += 1) {
+    template += `
+      <div class="restaurant-item">
+        <div class="restaurant-item__header">
+            <img class="restaurant-item__header__poster" width="100%" height="350px" src="./images/placeholder.png" alt="skeleton">
+        </div>
+        <div class="restaurant-item__content">
+          <h3 class="skeleton">Lorem ipsum dolor sit.</a></h3>
+          <p class="skeleton">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias aspernatur, assumenda aut consectetur consequuntur debitis deleniti dicta dolorem dolorum eos exercitationem labore laboriosam magni nihil, nobis obcaecati optio perspiciatis placeat qui recusandae saepe sapiente sequi totam ullam ut.</p>
+        </div>
+      </div>`;
+  }
+  return template;
+};
+
 export {
   createRestaurantItemTemplate,
   createRestaurantDetailTemplate,
   createLikeButtonTemplate,
   createLikedButtonTemplate,
+  createSkeletonRestaurantTemplate,
 };
