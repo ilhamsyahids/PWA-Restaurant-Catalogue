@@ -1,11 +1,13 @@
-import runtime from 'serviceworker-webpack-plugin/lib/runtime';
-
-const swRegister = async () => {
+const swRegister = () => {
   if ('serviceWorker' in navigator) {
-    await runtime.register();
-    return;
+    import('serviceworker-webpack-plugin/lib/runtime')
+      .then((module) => module.default)
+      .then(async (runtime) => {
+        await runtime.register();
+      });
+  } else {
+    console.log('Service worker not supported in this browser');
   }
-  console.log('Service worker not supported in this browser');
 };
 
 export default swRegister;
