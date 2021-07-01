@@ -238,6 +238,7 @@ main {
 .restaurant .restaurant__poster {
     width: 100%;
     max-width: 400px;
+    object-fit: cover;
 }
 
 .restaurant .restaurant__info h4 {

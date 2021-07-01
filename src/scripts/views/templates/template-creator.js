@@ -10,7 +10,7 @@ import {
 
 const createRestaurantDetailTemplate = (restaurant) => `
   <h2 class="restaurant__title">${restaurant.name}</h2>
-  <img class="restaurant__poster lazyload" data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" />
+  <img class="restaurant__poster lazyload" width="400" height="200" data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" />
   <div class="restaurant__info">
     <h3>Information</h3>
     <h4>City</h4>
@@ -52,7 +52,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
 const createRestaurantItemTemplate = (restaurant) => `
   <div class="restaurant-item">
     <div class="restaurant-item__header">
-        <img class="lazyload restaurant-item__header__poster" alt="${restaurant.name}"
+        <img class="lazyload restaurant-item__header__poster" alt="${restaurant.name}" width="400" height="200"
           data-src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}">
         <div class="restaurant-item__header__city">
             <p>${restaurant.city}</p>
