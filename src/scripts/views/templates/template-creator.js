@@ -9,7 +9,7 @@ import {
 } from './template-restaurant-detail';
 
 const createRestaurantDetailTemplate = (restaurant) => `
-  <h2 class="restaurant__title">${restaurant.name}</h2>
+  <h2 class="restaurant__name">${restaurant.name}</h2>
   <img class="restaurant__poster lazyload" width="400" height="200" data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" />
   <div class="restaurant__info">
     <h3>Information</h3>
@@ -62,7 +62,7 @@ const createRestaurantItemTemplate = (restaurant) => `
         </div>
     </div>
     <div class="restaurant-item__content">
-        <h3><a href="${`/#/detail/${restaurant.id}`}">${restaurant.name}</a></h3>
+        <h3 class="restaurant__name"><a href="${`/#/detail/${restaurant.id}`}">${restaurant.name || '-'}</a></h3>
         <p>${restaurant.description}</p>
     </div>
   </div>
@@ -90,8 +90,8 @@ const createSkeletonRestaurantTemplate = (count) => {
             <img class="restaurant-item__header__poster" width="100%" height="350px" src="./images/placeholder.png" alt="skeleton">
         </div>
         <div class="restaurant-item__content">
-          <h3 class="skeleton">Lorem ipsum dolor sit.</a></h3>
-          <p class="skeleton">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias aspernatur, assumenda aut consectetur consequuntur debitis deleniti dicta dolorem dolorum eos exercitationem labore laboriosam magni nihil, nobis obcaecati optio perspiciatis placeat qui recusandae saepe sapiente sequi totam ullam ut.</p>
+          <h3 class="restaurant__name skeleton"></a></h3>
+          <p class="skeleton"></p>
         </div>
       </div>`;
   }
