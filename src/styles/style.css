@@ -303,3 +303,16 @@ footer p a {
     background-color: #eeeeee;
     color: #eeeeee;
 }
+
+/*
+   Search
+*/
+
+#query {
+    border-radius: 10px;
+    margin: 10px auto;
+    display: block;
+    width: 50%;
+    height: 25px;
+    padding: 0 10px;   
+}
