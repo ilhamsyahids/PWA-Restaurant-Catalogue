@@ -12,6 +12,7 @@
       "sourceType": "module"
   },
   "rules": {
+      "no-prototype-builtins": 0,
       "no-new": 0,
       "class-methods-use-this": 0,
       "import/no-extraneous-dependencies": 0,
