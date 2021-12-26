@@ -6,7 +6,7 @@ Before(({ I }) => {
 });
 
 Scenario('unliking one restaurant', async ({ I }) => {
-  I.see('Tidak ada restaurant untuk ditampilkan', '.restaurant-item__not__found');
+  I.see('No restaurant', '.restaurant-item__not__found');
 
   I.amOnPage('/');
 
@@ -30,5 +30,5 @@ Scenario('unliking one restaurant', async ({ I }) => {
   I.click('#likeButton');
 
   I.amOnPage('/#/favorites');
-  I.see('Tidak ada restaurant untuk ditampilkan', '.restaurant-item__not__found');
+  I.see('No restaurant', '.restaurant-item__not__found');
 });
